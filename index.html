@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YHECNLMLJM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YHECNLMLJM');
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rahul Mundra – Analytics &amp; AI Leader, UAE</title>
@@ -516,6 +525,7 @@ section{padding-block:clamp(64px,9vw,112px)}
     b.addEventListener('click',function(){
       var el=document.getElementById(b.getAttribute('data-copy'));
       var text=el.textContent.trim();
+      if(typeof gtag==='function'){gtag('event','copy_contact',{contact_type:b.getAttribute('data-copy')});}
       function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy';},1600);}
       function fallback(){var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected';setTimeout(function(){b.textContent='Copy';},1600);}
       if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,fallback);}else{fallback();}
