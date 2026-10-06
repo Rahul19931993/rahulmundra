@@ -271,6 +271,17 @@ section{padding-block:clamp(64px,9vw,112px)}
 .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:64px;padding-top:18px;border-top:1px solid #2a2a2a;font:400 12px/1.4 var(--f-mono);color:var(--on-brand-deep-muted)}
 
 @media (prefers-reduced-motion: reduce){*{animation:none!important;scroll-behavior:auto!important}}
+
+/* recommendations */
+.recs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+@media (max-width:820px){.recs{grid-template-columns:1fr}}
+.rec{margin:0;display:flex;flex-direction:column;background:var(--surface-raised);border:1px solid var(--hairline);border-top:3px solid var(--brand);border-radius:4px;padding:28px 28px 24px}
+.rec::before{content:"\201C";font:400 64px/.6 var(--f-display);color:var(--accent);display:block;height:30px}
+.rec blockquote{margin:0;display:grid;gap:14px;font-size:16px;line-height:1.6}
+.rec blockquote p{margin:0}
+.rec figcaption{margin-top:auto;padding-top:22px}
+.rec figcaption b{display:block;font:700 15px/1.3 var(--f-head)}
+.rec figcaption span{display:block;margin-top:4px;font:400 12px/1.5 var(--f-mono);color:var(--ink-muted)}
 </style>
 </head>
 <body>
@@ -335,14 +346,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="stats">
       <div class="stat hl"><b>AED 300M+</b><span>Incremental sales</span></div>
       <div class="stat"><b>10x</b><span>ROI, McKinsey-validated</span></div>
-      <div class="stat"><b>7M+</b><span>Yearly active loyalty members</span></div>
+      <div class="stat"><b>7M+</b><span>Loyalty members</span></div>
       <div class="stat"><b>AED 23B</b><span>Annual sales influenced</span></div>
       <div class="stat"><b>15</b><span>Carrefour markets</span></div>
       <div class="stat"><b>11+</b><span>Years in analytics</span></div>
     </div>
 
     <figure class="chart" aria-labelledby="chart-title">
-      <h3 id="chart-title">Personalization lifted loyalty sales penetration by 20pp and took ROI from 7x to 10.4x</h3>
+      <h3 id="chart-title">Personalization lifted loyalty sales penetration by 20pp and took ROI from 7x to 10x</h3>
       <p class="unit">Percent of members or sales, and ROI as a multiple · before vs. after the customer intelligence programme</p>
       <div class="db hl">
         <div class="lab">Sales penetration<small>Loyalty share of sales</small></div>
@@ -364,16 +375,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="track"><div class="seg" style="left:10%;width:8%"></div><span class="pt from" style="left:10%"></span><span class="pt to" style="left:18%"></span><span class="pt-l" style="left:7%">10%</span><span class="pt-l to" style="left:21%">18%</span></div>
         <div class="delta">▲ +8pp<small>favourable</small></div>
       </div>
-      <div class="db">
-        <div class="lab">Yearly churn<small>Lower is better</small></div>
-        <div class="track"><div class="seg" style="left:25%;width:5%"></div><span class="pt from" style="left:30%"></span><span class="pt to" style="left:25%"></span><span class="pt-l" style="left:33%">30%</span><span class="pt-l to" style="left:22%">25%</span></div>
-        <div class="delta">▼ −5pp<small>favourable</small></div>
-      </div>
-      <div class="axis" aria-hidden="true"><span></span><div><i style="left:0">0%</i><i style="left:25%">25%</i><i style="left:50%">50%</i><i style="left:75%">75%</i><i style="left:100%">100%</i></div><span></span></div>
+            <div class="axis" aria-hidden="true"><span></span><div><i style="left:0">0%</i><i style="left:25%">25%</i><i style="left:50%">50%</i><i style="left:75%">75%</i><i style="left:100%">100%</i></div><span></span></div>
       <div class="db">
         <div class="lab">Return on investment<small>Return per AED invested</small></div>
-        <div class="track"><div class="seg" style="left:58.33%;width:28.33%"></div><span class="pt from" style="left:58.33%"></span><span class="pt to" style="left:86.67%"></span><span class="pt-l" style="left:58.33%">7x</span><span class="pt-l to" style="left:86.67%">10.4x</span></div>
-        <div class="delta">▲ +3.4x<small>favourable</small></div>
+        <div class="track"><div class="seg" style="left:58.33%;width:25%"></div><span class="pt from" style="left:58.33%"></span><span class="pt to" style="left:83.33%"></span><span class="pt-l" style="left:58.33%">7x</span><span class="pt-l to" style="left:83.33%">10x</span></div>
+        <div class="delta">▲ +3x<small>favourable</small></div>
       </div>
       <div class="axis" aria-hidden="true"><span></span><div><i style="left:0">0x</i><i style="left:25%">3x</i><i style="left:50%">6x</i><i style="left:75%">9x</i><i style="left:100%">12x</i></div><span></span></div>
       <figcaption class="src">Source: Majid Al Futtaim loyalty programme results; incremental sales and ROI validated by McKinsey.</figcaption>
@@ -416,9 +422,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h3>Analytics Manager, Customer Intelligence &amp; Loyalty Growth Analytics</h3>
           <p class="org">Majid Al Futtaim (Carrefour)</p>
           <ul>
-            <li><b>AED 300M+ incremental sales at 10x ROI</b> from ML-powered segmentation and personalised campaigns across app, web, search, social, display and video.</li>
-            <li>Defined the analytics vision, roadmap, governance and operating model for customer and loyalty investment across 15 Carrefour markets; present growth strategy to C-level leadership each quarter.</li>
-            <li>Put CLTV, churn and propensity models into production in Braze and web, and launched a global self-serve Power BI ecosystem for commercial teams.</li>
+            <li><b>AED 300M+ incremental sales at 10x ROI</b> (McKinsey-validated) from segment-led personalised omnichannel campaigns across 15 markets, each measured against a universal control group.</li>
+            <li>Lifted loyalty sales penetration from 40% to 60% by revamping the loyalty value proposition, and defined the analytics vision, roadmap, governance and operating model; present growth strategy to C-level leadership each quarter.</li>
+            <li>Built a 26-segment customer segmentation and a Know Your Customer view in Power BI; put CLTV and propensity models live in Braze and web.</li>
+            <li>Built the strategic defense dashboard that cut a 30% sales decline to 12% in boycott-affected GCC markets, and automated campaign measurement for market and country teams.</li>
           </ul>
         </div>
       </article>
@@ -428,8 +435,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h3>Data Scientist</h3>
           <p class="org">Abu Dhabi Commercial Bank (ADCB)</p>
           <ul>
-            <li><b>Saved AED 1M a year</b> with SMS cost-optimisation algorithms for targeted customer communication (Tamayuz Award, 2020).</li>
-            <li>Built NLP text-matching to standardise company names across the ADCB, UNB and Al Hilal merger.</li>
+            <li><b>Saved AED 1M a year</b> with machine-learning SMS targeting that cut unnecessary and over-length messages (Tamayuz Award, 2020).</li>
             <li>Built regression and K-Means models on the drivers of wholesale balances and CASA deposit stickiness.</li>
           </ul>
         </div>
@@ -440,9 +446,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h3>Business Intelligence Team Leader</h3>
           <p class="org">Emirates NBD</p>
           <ul>
-            <li>Led a BI team of 6; <b>cut processing time by 90%</b> through ETL automation in SAS, QlikView and VBA, saving 1 FTE (Bright Idea Award, 2018).</li>
-            <li>Built executive QlikView dashboards that improved debt-recovery performance by 70%.</li>
-            <li>Lifted resolution rates 5% by moving to cyclical account allocation with an automated balancing algorithm.</li>
+            <li>Led a BI team of 6 and moved delinquent-card allocation from once a month to ten cycles, <b>lifting resolution from 75% to 80%</b>.</li>
+            <li>Built a Random Forest pre-delinquency model to contact likely defaulters before the due date, and automated calling and daily paid/unpaid reporting for collections.</li>
           </ul>
         </div>
       </article>
@@ -461,6 +466,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<section id="recommendations" style="border-top:1px solid var(--hairline)">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Recommendations</p>
+      <h2>What colleagues say</h2>
+    </div>
+    <div class="recs">
+      <figure class="rec">
+        <blockquote>
+          <p>Rahul is my direct reportee at Carrefour, and having worked with him closely, I can confidently say he is one of the strongest analytics leaders I have worked with. He has an exceptional ability to bridge the gap between complex data and business decisions.</p>
+          <p>What sets Rahul apart is his business-first mindset. He understands the underlying business problems, challenges assumptions with data, and presents recommendations in a way that stakeholders at all levels can easily understand and act upon.</p>
+        </blockquote>
+        <figcaption><b>Rahul Malani</b><span>Manager, Majid Al Futtaim (Carrefour) · LinkedIn, July 2026</span></figcaption>
+      </figure>
+      <figure class="rec">
+        <blockquote>
+          <p>He's one of those people who just makes the analytics side of things easier to deal with. &hellip; He never just sent over a dashboard and called it done, he would walk you through what it actually meant for the business, in a way that did not require a data background to follow.</p>
+          <p>He is also not afraid to tell you when the numbers don't back up what you want to hear, which I know isn't always comfortable, but he does it without being difficult about it.</p>
+        </blockquote>
+        <figcaption><b>Suresh Revani</b><span>Data Science &amp; AI Manager, Majid Al Futtaim · LinkedIn, June 2026</span></figcaption>
+      </figure>
+    </div>
+    <div class="cta" style="margin-top:32px"><a class="btn btn-red" href="https://www.linkedin.com/in/rahulmundra-analytics-leader/details/recommendations/" target="_blank" rel="noopener" onclick="if(typeof gtag==='function'){gtag('event','click_linkedin_recommendations');}">Read all recommendations on LinkedIn ↗</a></div>
+  </div>
+</section>
+
 <section id="projects" class="band-sunken">
   <div class="wrap">
     <div class="sec-head">
@@ -469,31 +500,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="projects">
       <article class="proj hl">
-        <p class="kicker muted">Predictive AI</p>
-        <h3>Predictive growth &amp; churn intelligence framework</h3>
+        <p class="kicker muted">Loyalty strategy</p>
+        <h3>Loyalty value proposition and analytics roadmap</h3>
         <dl>
-          <div><dt>Problem</dt><dd>One-size-fits-all campaigns and no early warning on members about to lapse.</dd></div>
-          <div><dt>What I built</dt><dd>End-to-end CLTV, churn and propensity models in Python and SQL, with scores deployed into Braze and web across 7 markets.</dd></div>
+          <div><dt>Problem</dt><dd>Offline loyalty only works when customers scan their Share ID, and penetration sat at around 40%.</dd></div>
+          <div><dt>What I built</dt><dd>A revamped value proposition (instant member prices, Share Days, competitions, journey rewards) on top of one analytics vision across 15 markets.</dd></div>
         </dl>
-        <div class="result"><div class="result-inner"><b>30% → 25%</b><span>Yearly churn · AED 300M+ incremental sales at 10x ROI</span></div></div>
+        <div class="result"><div class="result-inner"><b>40% → 60%</b><span>Loyalty sales penetration · average across markets</span></div></div>
       </article>
       <article class="proj">
-        <p class="kicker muted">Measurement</p>
-        <h3>Global campaign management &amp; incrementality ecosystem</h3>
+        <p class="kicker muted">Personalisation</p>
+        <h3>Personalised omnichannel campaigns</h3>
         <dl>
-          <div><dt>Problem</dt><dd>Manual reporting cycles and no agreed way to measure true campaign lift.</dd></div>
-          <div><dt>What I built</dt><dd>A global self-serve Power BI ecosystem and a measurement and attribution framework for campaign lift and budget allocation.</dd></div>
+          <div><dt>Problem</dt><dd>Loyalty budgets needed proof of return, and one-size-fits-all offers left sales unrealised.</dd></div>
+          <div><dt>What I built</dt><dd>Segment-led online and in-store coupons, run as tactical campaigns and measured against a universal control group.</dd></div>
         </dl>
-        <div class="result"><div class="result-inner"><b>Self-serve</b><span>Budget optimised across channels · brand-level insight for supplier negotiations</span></div></div>
+        <div class="result"><div class="result-inner"><b>AED 300M+</b><span>Incremental sales across 15 markets · 10x ROI</span></div></div>
       </article>
       <article class="proj">
-        <p class="kicker muted">Segmentation</p>
-        <h3>Strategic market defense &amp; advanced segmentation</h3>
+        <p class="kicker muted">Crisis response</p>
+        <h3>Strategic defense dashboard</h3>
         <dl>
-          <div><dt>Problem</dt><dd>International brand boycotts put loyalty and share at risk.</dd></div>
-          <div><dt>What I built</dt><dd>30 segmentation models, 13 lifestyle-based shopper archetypes and a Strategic Defense Dashboard that shifted demand to local and private-label brands.</dd></div>
+          <div><dt>Problem</dt><dd>A regional brand boycott cut sales in affected GCC markets by around 30%.</dd></div>
+          <div><dt>What I built</dt><dd>A dashboard showing which customers, products and web experiences drove the loss, guiding re-engagement and supplier negotiations.</dd></div>
         </dl>
-        <div class="result"><div class="result-inner"><b>+3pp</b><span>Annual retention</span></div></div>
+        <div class="result"><div class="result-inner"><b>30% → 12%</b><span>Sales decline in the affected markets</span></div></div>
       </article>
     </div>
     <div class="cta" style="margin-top:40px"><a class="btn btn-red" href="portfolio.html">See the full portfolio →</a></div>
@@ -507,11 +538,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2>The full stack, from data pipeline to boardroom</h2>
     </div>
     <div class="skills">
-      <div class="skill-row"><h3>Advanced analytics &amp; AI</h3><div class="tags"><span>Machine Learning</span><span>Predictive &amp; Prescriptive Analytics</span><span>CLTV</span><span>Churn &amp; Propensity</span><span>Segmentation</span><span>Forecasting</span><span>Time Series</span><span>NLP</span><span>A/B Testing</span><span>Incrementality</span><span>Model Deployment</span></div></div>
-      <div class="skill-row"><h3>Customer &amp; marketing</h3><div class="tags"><span>Loyalty Analytics</span><span>Personalisation</span><span>Marketing ROI</span><span>Attribution</span><span>Promotions Effectiveness</span><span>Campaign Analytics</span><span>Cohort &amp; RFM</span><span>Omni-Channel</span></div></div>
-      <div class="skill-row"><h3>Data &amp; governance</h3><div class="tags"><span>CDP</span><span>Data Governance</span><span>Data Quality</span><span>ETL &amp; Pipelines</span><span>Data Warehousing</span><span>Enterprise KPIs</span><span>Self-Service BI</span></div></div>
-      <div class="skill-row"><h3>Tools</h3><div class="tags"><span>Azure</span><span>Databricks</span><span>Data Factory</span><span>Python</span><span>SQL</span><span>SAS</span><span>R</span><span>Power BI</span><span>Tableau</span><span>QlikView</span><span>Braze</span><span>Excel/VBA</span></div></div>
-      <div class="skill-row" style="border-bottom:1px solid var(--hairline)"><h3>Leadership</h3><div class="tags"><span>People Management</span><span>Hiring</span><span>Coaching</span><span>Analytics Strategy</span><span>Stakeholder Management</span><span>Executive Communication</span><span>Cross-Functional Leadership</span></div></div>
+      <div class="skill-row"><h3>Customer &amp; loyalty analytics</h3><div class="tags"><span>Loyalty Analytics</span><span>Loyalty Strategy</span><span>Customer Segmentation</span><span>RFM</span><span>Personalisation</span><span>Omni-Channel Campaigns</span><span>Sales Penetration</span><span>Marketing ROI</span><span>Campaign Analytics</span><span>Promotions Effectiveness</span></div></div>
+      <div class="skill-row"><h3>Advanced analytics &amp; AI</h3><div class="tags"><span>Machine Learning</span><span>Random Forest</span><span>K-Means Clustering</span><span>Regression</span><span>CLTV &amp; Propensity Models</span><span>Incrementality &amp; Control Groups</span><span>A/B Testing</span><span>Double-Delta Analysis</span><span>Pre-Delinquency Models</span><span>Model Deployment</span></div></div>
+      <div class="skill-row"><h3>Data &amp; platforms</h3><div class="tags"><span>CDP</span><span>Gravty</span><span>Maxxing</span><span>Data Governance</span><span>Data Quality</span><span>ETL &amp; Pipelines</span><span>Data Warehousing</span><span>Enterprise KPIs</span><span>Self-Service BI</span></div></div>
+      <div class="skill-row"><h3>Tools</h3><div class="tags"><span>Python</span><span>SQL</span><span>Power BI</span><span>Braze</span><span>Azure</span><span>Databricks</span><span>Data Factory</span><span>SAS</span><span>R</span></div></div>
+      <div class="skill-row"><h3>Earlier toolset</h3><div class="tags"><span>Tableau</span><span>QlikView</span><span>Excel/VBA</span></div></div>
+      <div class="skill-row" style="border-bottom:1px solid var(--hairline)"><h3>Leadership</h3><div class="tags"><span>People Management</span><span>Hiring</span><span>Coaching</span><span>Analytics Strategy</span><span>Operating Model Design</span><span>Stakeholder Management</span><span>Executive Communication</span><span>Cross-Functional Leadership</span></div></div>
     </div>
   </div>
 </section>
@@ -531,7 +563,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul></div>
       <div class="cred"><h3>Awards</h3><ul>
         <li><strong>Tamayuz Award · 2020</strong><span>ADCB · AED 1M a year saved on SMS communication</span></li>
-        <li><strong>Bright Idea Award · 2018</strong><span>Emirates NBD · Collections-reporting automation</span></li>
       </ul></div>
     </div>
   </div>
@@ -547,6 +578,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <dl class="lines">
         <div class="line"><dt>Email</dt><dd><span class="val" id="email">rahulmundra8087@gmail.com</span><button class="copy" type="button" data-copy="email">Copy</button></dd></div>
         <div class="line"><dt>Phone · WhatsApp</dt><dd><span class="val" id="phone">+971 54 368 0961</span><button class="copy" type="button" data-copy="phone">Copy</button></dd></div>
+        <div class="line"><dt>Phone (alternate)</dt><dd><span class="val" id="phone2">+971 50 290 1706</span><button class="copy" type="button" data-copy="phone2">Copy</button></dd></div>
         <div class="line"><dt>LinkedIn</dt><dd><a class="val" href="https://www.linkedin.com/in/rahulmundra-analytics-leader/" target="_blank" rel="noopener">rahulmundra-analytics-leader ↗</a></dd></div>
       </dl>
       <div class="chips">

@@ -21,7 +21,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script>try{var t=localStorage.getItem('rm-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Portfolio – Rahul Mundra, Analytics &amp; AI Leader</title>
-<meta name="description" content="Ten high-impact analytics and AI projects: a 26-segment customer segmentation, AED 300M+ of incremental sales from personalised omnichannel campaigns, churn and CLTV models in production, incrementality measurement, automation and BI, with AED 300M+ in incremental sales.">
+<meta name="description" content="Eight high-impact analytics and AI projects: a 26-segment customer segmentation, AED 300M+ of incremental sales from personalised omnichannel campaigns, churn and CLTV models in production, incrementality measurement, automation and BI, with AED 300M+ in incremental sales.">
 <meta name="author" content="Rahul Mundra">
 <link rel="canonical" href="https://rahul19931993.github.io/rahulmundra/portfolio.html">
 
@@ -30,7 +30,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:site_name" content="Rahul Mundra">
 <meta property="og:url" content="https://rahul19931993.github.io/rahulmundra/portfolio.html">
 <meta property="og:title" content="Portfolio – Rahul Mundra, Analytics &amp; AI Leader">
-<meta property="og:description" content="Ten high-impact analytics and AI projects: a 26-segment customer segmentation, AED 300M+ of incremental sales from personalised omnichannel campaigns, churn and CLTV models in production, incrementality measurement, automation and BI, with AED 300M+ in incremental sales.">
+<meta property="og:description" content="Eight high-impact analytics and AI projects: a 26-segment customer segmentation, AED 300M+ of incremental sales from personalised omnichannel campaigns, churn and CLTV models in production, incrementality measurement, automation and BI, with AED 300M+ in incremental sales.">
 <meta property="og:image" content="https://rahul19931993.github.io/rahulmundra/og-image.png">
 <meta property="og:image:secure_url" content="https://rahul19931993.github.io/rahulmundra/og-image.png">
 <meta property="og:image:type" content="image/png">
@@ -41,7 +41,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="profile:last_name" content="Mundra">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Portfolio – Rahul Mundra, Analytics &amp; AI Leader">
-<meta name="twitter:description" content="Ten high-impact analytics and AI projects: a 26-segment customer segmentation, AED 300M+ of incremental sales from personalised omnichannel campaigns, churn and CLTV models in production, incrementality measurement, automation and BI, with AED 300M+ in incremental sales.">
+<meta name="twitter:description" content="Eight high-impact analytics and AI projects: a 26-segment customer segmentation, AED 300M+ of incremental sales from personalised omnichannel campaigns, churn and CLTV models in production, incrementality measurement, automation and BI, with AED 300M+ in incremental sales.">
 <meta name="twitter:image" content="https://rahul19931993.github.io/rahulmundra/og-image.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='4' fill='%23e3141c'/%3E%3Crect x='8.32' y='42.75' width='6.4' height='8.45' rx='1.92'/%3E%3Crect x='18.56' y='37.38' width='6.4' height='13.82' rx='1.92'/%3E%3Crect x='28.8' y='31.23' width='6.4' height='19.97' rx='1.92'/%3E%3Crect x='39.04' y='23.55' width='6.4' height='27.65' rx='1.92'/%3E%3Crect x='49.28' y='12.8' width='6.4' height='38.4' rx='1.92' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -272,6 +272,17 @@ section{padding-block:clamp(64px,9vw,112px)}
 
 @media (prefers-reduced-motion: reduce){*{animation:none!important;scroll-behavior:auto!important}}
 
+/* recommendations */
+.recs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+@media (max-width:820px){.recs{grid-template-columns:1fr}}
+.rec{margin:0;display:flex;flex-direction:column;background:var(--surface-raised);border:1px solid var(--hairline);border-top:3px solid var(--brand);border-radius:4px;padding:28px 28px 24px}
+.rec::before{content:"\201C";font:400 64px/.6 var(--f-display);color:var(--accent);display:block;height:30px}
+.rec blockquote{margin:0;display:grid;gap:14px;font-size:16px;line-height:1.6}
+.rec blockquote p{margin:0}
+.rec figcaption{margin-top:auto;padding-top:22px}
+.rec figcaption b{display:block;font:700 15px/1.3 var(--f-head)}
+.rec figcaption span{display:block;margin-top:4px;font:400 12px/1.5 var(--f-mono);color:var(--ink-muted)}
+
 /* ---------- portfolio page ---------- */
 [hidden]{display:none!important}
 .nav ul a[aria-current="page"]{color:var(--on-brand-deep)}
@@ -303,8 +314,13 @@ section{padding-block:clamp(64px,9vw,112px)}
 .toolbar .spacer{flex:1}
 .fbtn.ghost{border-style:dashed}
 
-.pgrid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
+.pgrid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:stretch}
 @media (max-width:760px){.pgrid{grid-template-columns:1fr}}
+.pcard[hidden]{display:none}
+.pcard .pres{min-height:152px}
+.pcard .pres b.long{font-size:clamp(40px,4.6vw,58px);line-height:1.08;padding-top:6px}
+.pcard details{margin-top:auto}
+.pcard .ptags{margin-bottom:18px}
 .pcard{background:var(--surface-raised);border:1px solid var(--hairline);border-radius:4px;padding:26px 26px 22px;min-width:0;display:flex;flex-direction:column}
 .pcard.feat{border-top:3px solid var(--brand)}
 .ptop{display:flex;justify-content:space-between;gap:12px;font:500 11px/1.4 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted)}
@@ -314,6 +330,10 @@ section{padding-block:clamp(64px,9vw,112px)}
 .pcard.feat .pres b{color:var(--accent)}
 .pres span{display:block;margin-top:8px;font:500 12px/1.5 var(--f-mono);color:var(--ink-muted);letter-spacing:.04em}
 .pres .pbadge{display:inline-block;width:auto;margin-top:12px;color:var(--accent);letter-spacing:.08em;font:500 11px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:7px 9px;border:1px solid var(--accent);color:var(--accent);border-radius:2px}
+.pkpi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 18px;padding:14px 0 0;border-top:1px solid var(--hairline)}
+.pkpi dt{font:500 10px/1.3 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-muted)}
+.pkpi dd{margin:6px 0 0;font:700 17px/1.2 var(--f-head);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.pkpi{grid-template-columns:1fr}}
 .pcard h2{font:700 21px/1.25 var(--f-head);margin:20px 0 0;max-width:none;text-wrap:balance}
 .pwhere{margin:6px 0 0;font:400 13px/1.4 var(--f-mono);color:var(--ink-muted)}
 .pone{margin:12px 0 0;font-size:15px;color:var(--ink)}
@@ -328,6 +348,10 @@ summary:hover{color:var(--accent)}
 .pdet{display:grid;gap:14px;margin:16px 0 0}
 .pdet dt{font:500 11px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted)}
 .pdet dd{margin:6px 0 0;font-size:15px}
+.pdet .pout dd{font-weight:600;padding:12px 14px;border-left:3px solid var(--brand);background:var(--surface)}
+.pdet ul{margin:0;padding:0 0 0 18px;display:grid;gap:6px}
+.pdet li{padding-left:2px}
+.pdet li::marker{color:var(--accent)}
 
 /* featured case study */
 .pcard.wide{grid-column:1/-1;padding:clamp(22px,3.2vw,40px)}
@@ -401,12 +425,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="kicker">Portfolio · Selected projects</p>
     <h1>Portfolio</h1>
     <hr class="rule">
-    <p class="intro">Ten projects across retail and banking, from ML models in production to the automation and dashboards that put insight in front of decision-makers. Each card leads with the result.</p>
+    <p class="intro">Eight projects across retail and banking, from ML models in production to the automation and dashboards that put insight in front of decision-makers. Most cards lead with the result.</p>
     <div class="p-sum">
       <div><b>AED 300M+</b><span>Incremental sales</span></div>
-      <div><b>−90%</b><span>Processing time, reporting automation</span></div>
+      <div><b>75% → 80%</b><span>Card collections resolution rate</span></div>
       <div><b>AED 1M</b><span>Saved a year, SMS optimisation</span></div>
-      <div><b>2</b><span>Industry awards</span></div>
+      <div><b>1</b><span>Industry award, 2020</span></div>
     </div>
     <p class="crumbs"><a href="index.html">← Back to home</a></p>
   </div>
@@ -417,13 +441,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="toolbar" role="toolbar" aria-label="Filter projects">
       <span class="lbl">Show</span>
-      <button class="fbtn" type="button" data-f="all" aria-pressed="true">All<i>10</i></button>
-      <button class="fbtn" type="button" data-f="retail" aria-pressed="false">Retail &amp; loyalty<i>6</i></button>
-      <button class="fbtn" type="button" data-f="banking" aria-pressed="false">Banking<i>4</i></button>
+      <button class="fbtn" type="button" data-f="all" aria-pressed="true">All<i>8</i></button>
+      <button class="fbtn" type="button" data-f="retail" aria-pressed="false">Retail &amp; loyalty<i>5</i></button>
+      <button class="fbtn" type="button" data-f="banking" aria-pressed="false">Banking<i>3</i></button>
       <span class="spacer"></span>
       <button class="fbtn ghost" type="button" id="expand-all" data-open="0">Expand all details</button>
     </div>
     <ol class="pgrid">
+      <li class="pcard feat" data-sec="retail">
+        <div class="ptop"><span class="cat">Loyalty Strategy</span><span>2021–Present</span></div>
+        <div class="pres"><b>40% → 60%</b><span>Loyalty sales penetration · average across markets · AED 23B annual sales influenced</span></div>
+        <h2>Loyalty strategy: the value proposition and the analytics roadmap behind it</h2>
+        <p class="pwhere">Majid Al Futtaim (Carrefour)</p>
+        <p class="pone">A stronger member offer and one analytics vision across 15 markets, lifting the share of sales made by scanned loyalty members.</p>
+        <div class="ptags"><span>Loyalty</span><span>Value Proposition</span><span>Sales Penetration</span><span>Analytics Strategy</span><span>Executive Communication</span></div>
+        
+        <details>
+          <summary>Problem &amp; approach</summary>
+          <dl class="pdet">
+            <div><dt>Problem</dt><dd><ul><li>Offline loyalty only works when customers scan their Share ID, so sales penetration drives the whole programme</li><li>Penetration sat at around 40%</li><li>Loyalty investment across 15 markets had no common analytics vision, governance or roadmap</li></ul></dd></div>
+            <div><dt>Approach</dt><dd><ul><li>Defined the analytics vision, roadmap, governance and operating model across 15 markets</li><li>Presented the growth strategy to C-level leadership every quarter</li><li>Revamped the value proposition: Share member-price instant discounts, Share Days and a rebuilt fixed-generosity offer</li><li>Launched cashier and store competitions to drive scanning at the till</li><li>Sent personalised push notifications on products already on discount, and introduced journey rewards that unlock a benefit at a spending threshold</li></ul></dd></div>
+            <div class="pout"><dt>Outcome</dt><dd>Sales penetration rose from 40% to 60% on average across markets, linking far more sales to identified members.</dd></div>
+          </dl>
+        </details>
+      </li>
       <li class="pcard feat" data-sec="retail">
         <div class="ptop"><span class="cat">Segmentation</span><span>2021–Present</span></div>
         <div class="pres"><b>26 segments</b><span>Attributes and lifestyle tags per customer · 7M+ loyalty members</span></div>
@@ -431,11 +472,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="pwhere">Majid Al Futtaim (Carrefour)</p>
         <p class="pone">26 machine-learning segments show who each shopper is, what they value, how and when they shop, and what they need.</p>
         <div class="ptags"><span>Machine Learning</span><span>Transactional Data</span><span>RFM</span><span>Power BI</span><span>Segmentation</span></div>
+        
         <details>
           <summary>Problem &amp; approach</summary>
           <dl class="pdet">
-            <div><dt>Problem</dt><dd>One customer base, many different shoppers: Carrefour needed to know where each customer lies on value, behaviour and needs, not just who they are on average.</dd></div>
-            <div><dt>What I built</dt><dd>26 segments built from transactional data with machine learning, covering value (shopper group, affluence, promo sensitivity, margin), needs (lifestage, cultural affinity proxy, dietary and interest tags) and behaviour (channel, format, store, shop timing, order gap, preferred category and brand). Together they form a single Know Your Customer view in Power BI. Segment names and thresholds are proprietary to Majid Al Futtaim and are not shown.</dd></div>
+            <div><dt>Problem</dt><dd><ul><li>Carrefour served one customer base made up of very different shoppers</li><li>Averages hid where each customer sat on value, behaviour and needs</li></ul></dd></div>
+            <div><dt>Approach</dt><dd><ul><li>Built 26 segments from transactional data using machine learning</li><li>Covered value: shopper group, affluence, promo sensitivity and margin</li><li>Covered needs: lifestage, cultural affinity (a proxy), dietary and interest tags</li><li>Covered behaviour: channel, format, store, shop timing, order gap, preferred category and brand</li><li>Combined them into a single Know Your Customer view in Power BI</li></ul></dd></div>
+            <div class="pout"><dt>Outcome</dt><dd>Teams see where every one of 7M+ members sits across 26 segments. Segment names and thresholds are proprietary and not shown.</dd></div>
           </dl>
         </details>
       </li>
@@ -446,11 +489,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="pwhere">Majid Al Futtaim (Carrefour)</p>
         <p class="pone">Segment-led coupons for online and in-store, measured against a universal control group to prove the return on loyalty investment.</p>
         <div class="ptags"><span>Personalisation</span><span>Omnichannel</span><span>Control Groups</span><span>Incrementality</span><span>Campaign Measurement</span></div>
+        <dl class="pkpi"><div><dt>Yearly retention</dt><dd>65% → 72%</dd></div><div><dt>Activation rate</dt><dd>60% → 73%</dd></div><div><dt>Reactivation rate</dt><dd>10% → 18%</dd></div></dl>
         <details>
           <summary>Problem &amp; approach</summary>
           <dl class="pdet">
-            <div><dt>Problem</dt><dd>Loyalty budgets in each market needed proof of return, and one-size-fits-all offers left incremental sales on the table.</dd></div>
-            <div><dt>What I built</dt><dd>Used the customer segments to give each member a personalised omnichannel coupon, redeemable online and in store. Each market&#x27;s budget is turned into tactical campaigns with a single objective (basket uplift, transaction frequency, retention, incremental sales or activation), and every campaign is measured against a universal control group. Across 15 markets this has delivered AED 300M+ in incremental sales at 10x ROI, validated by McKinsey, and justifies the investment in personalised loyalty.</dd></div>
+            <div><dt>Problem</dt><dd><ul><li>Loyalty budgets in each market needed proof of return</li><li>One-size-fits-all offers left incremental sales unrealised</li></ul></dd></div>
+            <div><dt>Approach</dt><dd><ul><li>Gave each member a personalised omnichannel coupon, redeemable online and in store, based on their segment</li><li>Turned each market&#x27;s budget into tactical campaigns</li><li>Set one objective per campaign: basket, frequency, retention, incremental sales or activation uplift</li><li>Measured every campaign against a universal control group</li></ul></dd></div>
+            <div class="pout"><dt>Outcome</dt><dd>AED 300M+ in incremental sales across 15 markets at 10x ROI, validated by McKinsey. Retention rose from 65% to 72%, activation from 60% to 73% and reactivation from 10% to 18%.</dd></div>
           </dl>
         </details>
       </li>
@@ -461,116 +506,81 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="pwhere">Majid Al Futtaim (Carrefour)</p>
         <p class="pone">Dashboards that show market managers and country teams how each campaign performed, so the next one can launch on evidence.</p>
         <div class="ptags"><span>Power BI</span><span>Braze</span><span>POS Data</span><span>Target vs Control</span><span>Test &amp; Learn</span></div>
+        
         <details>
           <summary>Problem &amp; approach</summary>
           <dl class="pdet">
-            <div><dt>Problem</dt><dd>Campaign results arrived through slow, manual reporting, so market managers and country teams could not quickly learn from one campaign and launch the next.</dd></div>
-            <div><dt>What I built</dt><dd>An automated campaign-analytics dashboard that combines Braze, Gravty and Maxxing (the loyalty engines) with POS transaction data. Tactical campaigns are evaluated target group against control group; mass campaigns are evaluated against the KPIs the business needs. Market managers and country teams get an immediate read on every campaign and use it to test, learn and launch new ones based on what worked. It also feeds budget allocation across channels and brand-level insight for supplier negotiations.</dd></div>
+            <div><dt>Problem</dt><dd><ul><li>Campaign results arrived through slow, manual reporting</li><li>Market managers and country teams could not quickly learn from one campaign and launch the next</li></ul></dd></div>
+            <div><dt>Approach</dt><dd><ul><li>Automated a campaign-analytics dashboard</li><li>Combined Braze, Gravty and Maxxing (the loyalty engines) with POS transaction data</li><li>Evaluated tactical campaigns target group against control group</li><li>Evaluated mass campaigns against the KPIs the business needs</li><li>Gave market managers and country teams an immediate read on every campaign</li><li>Fed results into budget allocation across channels and brand-level supplier negotiations</li></ul></dd></div>
+            <div class="pout"><dt>Outcome</dt><dd>Market managers and country teams test, learn and launch new campaigns on evidence, without waiting for manual reports.</dd></div>
           </dl>
         </details>
       </li>
       <li class="pcard feat" data-sec="retail">
-        <div class="ptop"><span class="cat">Predictive AI</span><span>2021–Present</span></div>
-        <div class="pres"><b>30% → 25%</b><span>Yearly churn · members flagged before they lapse</span></div>
-        <h2>Predictive growth &amp; churn intelligence framework</h2>
+        <div class="ptop"><span class="cat">Crisis Response</span><span>2021–Present</span></div>
+        <div class="pres"><b>30% → 12%</b><span>Sales decline in the affected GCC markets, measured with a double-delta approach</span></div>
+        <h2>Strategic defense dashboard: responding to a regional brand boycott</h2>
         <p class="pwhere">Majid Al Futtaim (Carrefour)</p>
-        <p class="pone">CLTV, churn and propensity models live in Braze and web across 7 markets.</p>
-        <div class="ptags"><span>Python</span><span>SQL</span><span>Braze</span><span>CLTV</span><span>Churn</span></div>
+        <p class="pone">A boycott-mitigation dashboard that showed markets exactly which customers, products and web experiences drove the decline, and what to do about each.</p>
+        <div class="ptags"><span>Dashboarding</span><span>Segmentation</span><span>Double Delta</span><span>Supplier Negotiation</span><span>Personalisation</span></div>
+        
         <details>
           <summary>Problem &amp; approach</summary>
           <dl class="pdet">
-            <div><dt>Problem</dt><dd>One-size-fits-all campaigns and no early warning on loyalty members about to lapse.</dd></div>
-            <div><dt>What I built</dt><dd>End-to-end CLTV, churn and propensity models in Python and SQL, with scores deployed live into Braze and web to drive personalised journeys every day.</dd></div>
+            <div><dt>Problem</dt><dd><ul><li>Following regional tensions, sales in the affected GCC markets fell by around 30% (double-delta basis)</li><li>Markets needed to know where the loss was concentrated before they could respond</li></ul></dd></div>
+            <div><dt>Approach</dt><dd><ul><li>Built a boycott-mitigation dashboard for each affected market</li><li>Identified customers, by segment, falling well below the country average</li><li>Traced the decline to brands, SKUs, departments, sections, families and sub-families, with each cohort&#x27;s share of the loss</li><li>Recommended website changes showing the business is Majid Al Futtaim, a local company</li><li>Re-engaged customers through personalised campaigns</li><li>Negotiated with suppliers to promote their products, lifting back margin</li></ul></dd></div>
+            <div class="pout"><dt>Outcome</dt><dd>Sales decline reduced from 30% to 12%.</dd></div>
           </dl>
         </details>
       </li>
-      <li class="pcard feat" data-sec="retail">
-        <div class="ptop"><span class="cat">Segmentation</span><span>2021–Present</span></div>
-        <div class="pres"><b>+3pp</b><span>Annual member retention</span></div>
-        <h2>Strategic market defense &amp; advanced segmentation</h2>
-        <p class="pwhere">Majid Al Futtaim (Carrefour)</p>
-        <p class="pone">30 segmentation models and 13 shopper archetypes covering 7M+ members.</p>
-        <div class="ptags"><span>Segmentation</span><span>Clustering</span><span>Dashboarding</span></div>
-        <details>
-          <summary>Problem &amp; approach</summary>
-          <dl class="pdet">
-            <div><dt>Problem</dt><dd>International brand boycotts put loyalty and market share at risk.</dd></div>
-            <div><dt>What I built</dt><dd>30 segmentation models, 13 lifestyle-based shopper archetypes and a Strategic Defense Dashboard that shifted demand to local and private-label brands.</dd></div>
-          </dl>
-        </details>
-      </li>
-      <li class="pcard feat" data-sec="retail">
-        <div class="ptop"><span class="cat">Strategy</span><span>2021–Present</span></div>
-        <div class="pres"><b>40% → 60%</b><span>Loyalty share of sales · AED 23B annual sales influenced</span></div>
-        <h2>Customer intelligence operating model for Carrefour loyalty</h2>
-        <p class="pwhere">Majid Al Futtaim (Carrefour)</p>
-        <p class="pone">One analytics vision, governance and roadmap across 15 Carrefour markets.</p>
-        <div class="ptags"><span>Data Governance</span><span>Analytics Strategy</span><span>Executive Communication</span></div>
-        <details>
-          <summary>Problem &amp; approach</summary>
-          <dl class="pdet">
-            <div><dt>Problem</dt><dd>Customer and loyalty investment across 15 Carrefour markets lacked a common analytics vision, governance and roadmap.</dd></div>
-            <div><dt>What I built</dt><dd>Defined the analytics vision, roadmap, governance and operating model for loyalty investment, and present the growth strategy to C-level leadership every quarter.</dd></div>
-          </dl>
-        </details>
-      </li>
-      <li class="pcard" data-sec="banking">
-        <div class="ptop"><span class="cat">Automation</span><span>2016–2018</span></div>
-        <div class="pres"><b>−90%</b><span>Processing time · 1 FTE saved</span><span class="pbadge">Bright Idea Award · 2018</span></div>
-        <h2>Collections reporting automation</h2>
+      <li class="pcard feat" data-sec="banking">
+        <div class="ptop"><span class="cat">Collections Strategy</span><span>2016–2018</span></div>
+        <div class="pres"><b>75% → 80%</b><span>Delinquent-card resolution rate</span></div>
+        <h2>Cyclical allocation for credit-card collections</h2>
         <p class="pwhere">Emirates NBD</p>
-        <p class="pone">Automated ETL and reporting in SAS, QlikView and VBA while leading a BI team of 6.</p>
-        <div class="ptags"><span>SAS</span><span>QlikView</span><span>VBA</span><span>ETL</span></div>
+        <p class="pone">Moved delinquent-card allocation from once a month to ten cycles, with the best-matched agent for each customer.</p>
+        <div class="ptags"><span>Collections</span><span>Machine Learning</span><span>Allocation Strategy</span><span>Automation</span><span>SAS</span></div>
+        
         <details>
           <summary>Problem &amp; approach</summary>
           <dl class="pdet">
-            <div><dt>Problem</dt><dd>Slow, manual ETL and reporting for the collections business.</dd></div>
-            <div><dt>What I built</dt><dd>Automated the ETL and reporting pipeline in SAS, QlikView and VBA while leading a BI team of 6.</dd></div>
+            <div><dt>Problem</dt><dd><ul><li>Delinquent cards were allocated to agents once a month, on the 1st</li><li>A customer who missed a payment on the 2nd waited up to 29 days for follow-up</li><li>Resolution stalled at 75%, and provisions were higher than needed</li></ul></dd></div>
+            <div><dt>Approach</dt><dd><ul><li>Redesigned allocation into ten cycles a month, grouping statement dates so each cycle carried equal customers</li><li>Matched each customer with the best available agent</li><li>Contacted likely defaulters early with a machine-learning pre-delinquency model</li><li>Auto-called customers during the first five days of delinquency, avoiding agent allocation and incentives</li><li>Issued a daily automated paid/unpaid report, giving agents a fresh list every morning</li></ul></dd></div>
+            <div class="pout"><dt>Outcome</dt><dd>Resolution rate rose from 75% to 80%.</dd></div>
           </dl>
         </details>
       </li>
-      <li class="pcard" data-sec="banking">
-        <div class="ptop"><span class="cat">BI &amp; Dashboards</span><span>2016–2018</span></div>
-        <div class="pres"><b>+70%</b><span>Debt-recovery performance</span></div>
-        <h2>Executive debt-recovery dashboards</h2>
+      <li class="pcard feat" data-sec="banking">
+        <div class="ptop"><span class="cat">Predictive AI</span><span>2016–2018</span></div>
+        <div class="pres"><b class="long">Random Forest</b><span>Scores every card account on its chance of missing the next due date</span></div>
+        <h2>Pre-delinquency model: predicting who will miss the next due date</h2>
         <p class="pwhere">Emirates NBD</p>
-        <p class="pone">QlikView dashboards that gave leadership a live view of recovery performance.</p>
-        <div class="ptags"><span>QlikView</span><span>Executive Reporting</span><span>KPIs</span></div>
+        <p class="pone">A Random Forest classifier that scores every card account on its probability of missing the next due date, so collectors can contact customers before they become delinquent.</p>
+        <div class="ptags"><span>Random Forest</span><span>Machine Learning</span><span>Pre-delinquency</span><span>Python</span><span>Collections</span></div>
+        
         <details>
           <summary>Problem &amp; approach</summary>
           <dl class="pdet">
-            <div><dt>Problem</dt><dd>Leadership lacked a timely view of debt-recovery performance.</dd></div>
-            <div><dt>What I built</dt><dd>Executive QlikView dashboards tracking recovery performance across portfolios and agents.</dd></div>
+            <div><dt>Problem</dt><dd><ul><li>Collections started only after an account was already delinquent</li><li>Customers likely to miss their next due date looked the same as those who would pay</li><li>Contacting every customer was too costly</li></ul></dd></div>
+            <div><dt>Approach</dt><dd><ul><li>Built a Random Forest classifier, an ensemble of decision trees trained on bootstrap samples</li><li>Predicted the probability that each card account would miss its next due date</li><li>Randomised the features at each split to reduce overfitting</li><li>Tuned hyperparameters on a hold-out set and checked out-of-bag error</li><li>Explained the drivers with feature importance</li><li>Banded scores into risk deciles and fed them into the monthly allocation cycles and auto-calling</li></ul></dd></div>
+            <div class="pout"><dt>Outcome</dt><dd>Collectors contacted the highest-risk customers before the due date, instead of after the miss.</dd></div>
           </dl>
         </details>
       </li>
-      <li class="pcard" data-sec="banking">
+      <li class="pcard feat" data-sec="banking">
         <div class="ptop"><span class="cat">Optimisation</span><span>2018–2021</span></div>
         <div class="pres"><b>AED 1M</b><span>Saved per year on SMS communication</span><span class="pbadge">Tamayuz Award · 2020</span></div>
         <h2>SMS communication cost optimisation</h2>
         <p class="pwhere">Abu Dhabi Commercial Bank (ADCB)</p>
-        <p class="pone">Algorithms that target messages to the right customers instead of broadcasting.</p>
-        <div class="ptags"><span>Optimisation</span><span>Customer Targeting</span></div>
+        <p class="pone">Machine-learning targeting that sends an SMS only where it changes the outcome, cutting spend without hurting results.</p>
+        <div class="ptags"><span>Machine Learning</span><span>Uplift Modelling</span><span>Optimisation</span><span>Customer Targeting</span></div>
+        
         <details>
           <summary>Problem &amp; approach</summary>
           <dl class="pdet">
-            <div><dt>Problem</dt><dd>High spend on untargeted customer SMS communication.</dd></div>
-            <div><dt>What I built</dt><dd>Cost-optimisation algorithms that decide which customers receive which messages, so communication is targeted rather than broadcast.</dd></div>
-          </dl>
-        </details>
-      </li>
-      <li class="pcard" data-sec="banking">
-        <div class="ptop"><span class="cat">NLP</span><span>2018–2021</span></div>
-        <div class="pres"><b>3 → 1</b><span>Banks&#x27; company records unified for the ADCB, UNB &amp; Al Hilal merger</span></div>
-        <h2>Company-name matching across the bank merger</h2>
-        <p class="pwhere">Abu Dhabi Commercial Bank (ADCB)</p>
-        <p class="pone">NLP text matching to give three banks one view of corporate customers.</p>
-        <div class="ptags"><span>NLP</span><span>Text Matching</span><span>Data Quality</span></div>
-        <details>
-          <summary>Problem &amp; approach</summary>
-          <dl class="pdet">
-            <div><dt>Problem</dt><dd>Three banks&#x27; corporate customer records used inconsistent company names, blocking a single customer view after the merger.</dd></div>
-            <div><dt>What I built</dt><dd>An NLP text-matching approach to standardise and match company names across the ADCB, UNB and Al Hilal data.</dd></div>
+            <div><dt>Problem</dt><dd><ul><li>Untargeted SMS drove high spend</li><li>English and Arabic messages exceeded one SMS segment (160 and 70 characters), so each was billed twice</li><li>Unnecessary reminders went out as soon as a statement was generated</li><li>Many messages reached customers who would have acted anyway</li></ul></dd></div>
+            <div><dt>Approach</dt><dd><ul><li>Separated mandatory messages from discretionary ones</li><li>Measured each SMS&#x27;s incremental effect against a no-message control group</li><li>Modelled each customer&#x27;s likely response using machine learning</li><li>Sent only where the message changed the outcome</li><li>Ranked customers by value per SMS cost</li></ul></dd></div>
+            <div class="pout"><dt>Outcome</dt><dd>AED 1M saved per year, with outcomes held against the control group.</dd></div>
           </dl>
         </details>
       </li>
@@ -589,6 +599,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <dl class="lines">
         <div class="line"><dt>Email</dt><dd><span class="val" id="email">rahulmundra8087@gmail.com</span><button class="copy" type="button" data-copy="email">Copy</button></dd></div>
         <div class="line"><dt>Phone · WhatsApp</dt><dd><span class="val" id="phone">+971 54 368 0961</span><button class="copy" type="button" data-copy="phone">Copy</button></dd></div>
+        <div class="line"><dt>Phone (alternate)</dt><dd><span class="val" id="phone2">+971 50 290 1706</span><button class="copy" type="button" data-copy="phone2">Copy</button></dd></div>
         <div class="line"><dt>LinkedIn</dt><dd><a class="val" href="https://www.linkedin.com/in/rahulmundra-analytics-leader/" target="_blank" rel="noopener">rahulmundra-analytics-leader ↗</a></dd></div>
       </dl>
       <div class="chips">
