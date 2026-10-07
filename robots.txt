@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rahul19931993.github.io/rahulmundra/sitemap.xml
