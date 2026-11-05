@@ -355,6 +355,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
       <li class="keep"><a href="portfolio.html" class="nav-port">Portfolio</a></li>
+      <li><a href="#ai-projects">AI</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#beyond">Interests</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -594,6 +595,60 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </article>
     </div>
     <div class="cta" style="margin-top:40px"><a class="btn btn-red" href="portfolio.html">See the full portfolio →</a></div>
+  </div>
+</section>
+
+<style>
+#ai-projects .aicard{position:relative;border:2px solid var(--accent);border-radius:8px;background:var(--surface-raised,var(--surface));overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.18);max-width:980px}
+#ai-projects .aicard::before{content:"";display:block;height:6px;background:linear-gradient(90deg,#e3141c,#ff4d52 60%,#e3141c)}
+#ai-projects .ai-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;padding:24px 28px 0}
+#ai-projects .ai-head h3{margin:6px 0 0;font:700 clamp(22px,2.6vw,30px)/1.2 var(--f-head,inherit);color:var(--ink)}
+#ai-projects .ai-badge{font:500 11px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--accent);border-radius:3px;padding:6px 9px;white-space:nowrap}
+#ai-projects .ai-lede{padding:12px 28px 0;margin:0;color:var(--ink-muted);max-width:70ch}
+#ai-projects .ai-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:22px 28px 0;border:1px solid var(--hairline);border-radius:6px;overflow:hidden}
+#ai-projects .ai-stats div{padding:14px 16px;border-right:1px solid var(--hairline);min-width:0}
+#ai-projects .ai-stats div:last-child{border-right:0}
+#ai-projects .ai-stats b{display:block;font:700 clamp(24px,3vw,34px)/1.1 var(--f-head,inherit);color:var(--accent)}
+#ai-projects .ai-stats span{display:block;margin-top:4px;font:500 11px/1.4 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted)}
+#ai-projects .ai-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin:22px 28px 0;border-top:1px solid var(--hairline)}
+#ai-projects .ai-cols div{padding:16px 18px 4px 0;min-width:0}
+#ai-projects .ai-cols div+div{padding-left:18px;border-left:1px solid var(--hairline)}
+#ai-projects .ai-cols h4{margin:0 0 6px;font:500 11px/1.4 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+#ai-projects .ai-cols p{margin:0;font-size:14.5px;color:var(--ink)}
+#ai-projects .ai-foot{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;padding:20px 28px 24px}
+#ai-projects .chips{display:flex;gap:8px;flex-wrap:wrap}
+#ai-projects .chips span{font:500 12px/1 var(--f-mono);border:1px solid var(--hairline);border-radius:999px;padding:7px 11px;color:var(--ink)}
+#ai-projects .ai-note{padding:0 28px 22px;margin:-8px 0 0;font:400 12px/1.5 var(--f-mono);color:var(--ink-muted)}
+@media(max-width:760px){#ai-projects .ai-cols{grid-template-columns:1fr}#ai-projects .ai-cols div+div{padding-left:0;border-left:0;border-top:1px solid var(--hairline)}#ai-projects .ai-stats{grid-template-columns:1fr}#ai-projects .ai-stats div{border-right:0;border-bottom:1px solid var(--hairline)}}
+</style>
+<section id="ai-projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Personal AI projects</p>
+      <h2>Things I build with AI outside work</h2>
+    </div>
+    <article class="aicard">
+      <div class="ai-head">
+        <div><p class="kicker muted">Investing · AI-assisted analytics</p><h3>ETF Theme Cheat Sheet</h3></div>
+        <span class="ai-badge">Live dashboard</span>
+      </div>
+      <p class="ai-lede">An interactive screen that helps a UAE-based investor choose between hundreds of US and Irish-domiciled ETFs, where domicile changes the tax drag.</p>
+      <div class="ai-stats">
+        <div><b>236</b><span>Funds</span></div>
+        <div><b>74</b><span>Themes</span></div>
+        <div><b>6</b><span>Views</span></div>
+      </div>
+      <div class="ai-cols">
+        <div><h4>Problem</h4><p>Comparing cost, valuation, trend and tax treatment across hundreds of funds is slow and easy to get wrong.</p></div>
+        <div><h4>What I built</h4><p>A valuation and trend score for every fund, a sector-rotation scorecard, returns and 52-week ranges, tax and income helpers, a Fed and CPI calendar and a glossary.</p></div>
+        <div><h4>How it stays honest</h4><p>Every number carries a source and date, unrefreshable data is labelled, and any score resting on my judgement is marked as an assumption.</p></div>
+      </div>
+      <div class="ai-foot">
+        <div class="chips"><span>Claude</span><span>Live broker price data</span><span>HTML · JavaScript</span></div>
+        <a class="btn btn-red" href="https://claude.ai/artifact/2Mv22eQQZthfhJwdpt6P56" target="_blank" rel="noopener">Open the dashboard →</a>
+      </div>
+      <p class="ai-note">A research tool, not investment advice.</p>
+    </article>
   </div>
 </section>
 
