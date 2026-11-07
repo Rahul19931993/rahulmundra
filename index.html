@@ -619,6 +619,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 #ai-projects .chips{display:flex;gap:8px;flex-wrap:wrap}
 #ai-projects .chips span{font:500 12px/1 var(--f-mono);border:1px solid var(--hairline);border-radius:999px;padding:7px 11px;color:var(--ink)}
 #ai-projects .ai-note{padding:0 28px 22px;margin:-8px 0 0;font:400 12px/1.5 var(--f-mono);color:var(--ink-muted)}
+#ai-projects .ai-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:stretch}
+#ai-projects .ai-grid .aicard{display:flex;flex-direction:column;margin:0;min-width:0}
+#ai-projects .ai-grid .ai-lede{flex:0 0 auto}
+#ai-projects .ai-grid .ai-cols{grid-template-columns:1fr;flex:1}
+#ai-projects .ai-grid .ai-cols div+div{padding-left:0;border-left:0;border-top:1px solid var(--hairline)}
+#ai-projects .ai-grid .ai-foot{flex-wrap:wrap;gap:14px}
+@media(max-width:900px){#ai-projects .ai-grid{grid-template-columns:1fr}}
 @media(max-width:760px){#ai-projects .ai-cols{grid-template-columns:1fr}#ai-projects .ai-cols div+div{padding-left:0;border-left:0;border-top:1px solid var(--hairline)}#ai-projects .ai-stats{grid-template-columns:1fr}#ai-projects .ai-stats div{border-right:0;border-bottom:1px solid var(--hairline)}}
 </style>
 <section id="ai-projects">
@@ -627,6 +634,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="kicker">Personal AI projects</p>
       <h2>Things I build with AI outside work</h2>
     </div>
+    <div class="ai-grid">
     <article class="aicard">
       <div class="ai-head">
         <div><p class="kicker muted">Investing · AI-assisted analytics</p><h3>ETF Theme Cheat Sheet</h3></div>
@@ -649,6 +657,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <p class="ai-note">A research tool, not investment advice.</p>
     </article>
+    <article class="aicard" id="options-playbook">
+      <div class="ai-head">
+        <div><p class="kicker muted">Investing &middot; Learning tool</p><h3>GOOGL Options Playbook</h3></div>
+        <span class="ai-badge">Interactive guide</span>
+      </div>
+      <p class="ai-lede">A plain-English guide that teaches every major options strategy to a complete beginner, using one real stock (Alphabet) as the running example.</p>
+      <div class="ai-stats">
+        <div><b>26</b><span>Strategies</span></div>
+        <div><b>22</b><span>&ldquo;Pick your situation&rdquo; guides</span></div>
+        <div><b>7</b><span>Quiz questions</span></div>
+      </div>
+      <div class="ai-cols">
+        <div><h4>Problem</h4><p>Options are taught in jargon, so beginners either avoid them or take risks they do not understand.</p></div>
+        <div><h4>What I built</h4><p>Strategy cards with live profit-and-loss charts and a price slider, chance-of-profit estimates, a Greeks table, a strategy picker by market view, a comparison tool and a quiz.</p></div>
+        <div><h4>How it stays honest</h4><p>Prices are a dated snapshot, estimate-only charts are tagged, and the danger-zone strategies carry clear warnings.</p></div>
+      </div>
+      <div class="ai-foot">
+        <div class="chips"><span>Claude</span><span>HTML &middot; JavaScript</span><span>Black-Scholes model</span></div>
+        <a class="btn btn-red" href="https://claude.ai/artifact/LDecb87dGVaHFGC7SL9kAJ" target="_blank" rel="noopener">Open the playbook &rarr;</a>
+      </div>
+      <p class="ai-note">Educational only, not financial advice. Illustrative Nov 6-7, 2026 prices, not live quotes.</p>
+    </article>
+    </div>
   </div>
 </section>
 
